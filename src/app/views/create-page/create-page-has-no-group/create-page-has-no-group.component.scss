@@ -1,0 +1,49 @@
+.wrapper {
+  margin-top: 150px;
+  @media(max-width: 750px) {
+    padding-bottom: 25px;
+  }
+  .title {
+    text-align:center;
+    justify-self: flex-start;
+    margin-top: 0;
+    color: #A066FF;
+    @media(max-width: 750px) {
+      font-size: 21px;
+      width: 80%;
+      margin: 0 auto 15px;
+    }
+  }
+  .description {
+    text-align:center;
+    @media(max-width:750px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  input, textarea {
+    margin: 40px auto 62px;
+    position:relative;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 400px;
+    @media(max-width: 750px) {
+      width:300px;
+    }
+  }
+  .submitButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    color:white;
+  }
+}
+.createPageError {
+  position:relative;
+  top:-35px;
+}
+p.error {
+  margin-bottom: 25px;
+}

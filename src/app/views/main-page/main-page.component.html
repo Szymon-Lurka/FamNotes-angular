@@ -1,0 +1,8 @@
+<app-navigation></app-navigation>
+<div class="wrapper">
+  <h2 class="title">
+    Witaj <span>{{username}}!</span>
+  </h2>
+<app-has-no-group *ngIf="!hasGroup"></app-has-no-group>
+  <app-has-group *ngIf="hasGroup"></app-has-group>
+</div>

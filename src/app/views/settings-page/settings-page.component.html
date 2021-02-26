@@ -1,0 +1,7 @@
+<app-navigation></app-navigation>
+<div class="wrapper">
+  <h2 class="title">Ustawienia konta</h2>
+  <p class="nickname">Jesteś zalogowany jako <span>{{nickname | titlecase}}</span></p>
+</div>
+<app-settings-page-has-no-group *ngIf="!hasGroup"></app-settings-page-has-no-group>
+<app-settings-page-has-group *ngIf="hasGroup"></app-settings-page-has-group>

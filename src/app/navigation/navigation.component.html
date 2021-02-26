@@ -1,0 +1,48 @@
+<nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a
+        routerLink="/create"
+        routerLinkActive="active"
+        class="nav__link">
+        <div class="nav__link-hint">
+          Stwórz nową grupę
+        </div>
+        <img src="../../assets/svg/add.svg" alt="" class="nav__link-icon">
+      </a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" routerLink="/join" routerLinkActive="active">
+        <div class="nav__link-hint">
+          Dołącz do grupy
+        </div>
+        <img src="../../assets/svg/arrow-join.svg" alt="" class="nav__link-icon">
+      </a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" routerLink="/group" routerLinkActive="active">
+        <div class="nav__link-hint">
+          Twoja grupa
+        </div>
+        <img src="../../assets/svg/my-space-logo.svg" alt="" class="nav__link-icon">
+      </a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" routerLink="/settings" routerLinkActive="active">
+        <div class="nav__link-hint">
+          Ustawienia
+        </div>
+        <img src="../../assets/svg/gear.svg" alt="" class="nav__link-icon">
+      </a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link"
+      (click)="onLogout()">
+        <div class="nav__link-hint">
+          Wyloguj się
+        </div>
+        <img src="../../assets/svg/logout.svg" alt="" class="nav__link-icon">
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,59 @@
+<div class="wrapper">
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <h2 class="title">Na początek wpisz nazwę swojej grupy.</h2>
+    <p class="description">To jest twoja grupa - pełna dowolność nazewnictwa.</p>
+    <label>
+      <input
+        type="text"
+        placeholder="Nazwa grupy"
+        name="name"
+        ngModel
+        required
+        minlength="3"
+        #name="ngModel">
+      <span
+        class="error createPageError"
+        *ngIf="name.invalid && name.touched">
+        Nazwa ma mniej niż 3 znaki!</span>
+    </label>
+    <h2 class="title">Grupa nazwana? To teraz możesz ją krótko opisać.</h2>
+    <p class="description">Jaki jest cel tej grupy? Daj znać przyszłym członkom grupy po co tu właściwie są!</p>
+    <label>
+<textarea
+  name="description"
+  cols="30"
+  rows="5"
+  placeholder="Opis grupy"
+  ngModel
+  required
+  maxlength="300"
+  #description="ngModel">
+</textarea>
+      <span
+        class="error createPageError"
+        *ngIf="description.invalid && description.touched">
+        Opis grupy jest pusty lub ma więcej niż 300 znaków! (max. 300)</span>
+    </label>
+    <h2 class="title">Na koniec dodaj tag! (Max. 6 znaków)</h2>
+    <p class="description">Inni użytkownicy będą mogli dołączyć do twojej grupy wpisując jej tag!</p>
+    <label>
+      <input
+        type="text"
+        name="tag"
+        placeholder="Tag grupy"
+        ngModel
+        maxlength="6"
+        minlength="2"
+        #tag="ngModel">
+      <span
+        class="error createPageError"
+        *ngIf="tag.invalid && tag.touched">
+        Tag ma mniej niż 2 znaki!</span>
+    </label>
+    <p class="error" *ngIf="errorMessage !== ''">{{errorMessage}}</p>
+    <button
+      class="btn submitButton"
+      type="submit">
+      Utwórz grupę!</button>
+  </form>
+</div>

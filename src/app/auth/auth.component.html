@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <h2 class="title">FAMNOTES</h2>
+  <h2 class="description">Twoja nowa ulubiona aplikacja do zarządzania obowiązkami w domu!</h2>
+  <form class="form"
+        (ngSubmit)="onSubmit(form)"
+        #form="ngForm">
+    <h2>{{loginForm ? "Zaloguj się" : "Zarejestruj się" }}</h2>
+    <p
+      *ngIf="errorMessage !== ''"
+      class="error">{{errorMessage}}</p>
+    <label>
+      <input type="text"
+      placeholder="LOGIN"
+      name="login"
+      ngModel
+      required
+      maxlength="10"
+      #name="ngModel">
+      <span class="error" *ngIf="name.invalid && name.touched">Nazwa użytkownika powinna mieć max. 10 znaków.</span>
+    </label>
+    <label>
+      <input type="password"
+      placeholder="HASŁO"
+      name="password"
+      ngModel
+      required
+      [pattern]="pattern"
+      #password="ngModel">
+      <span class="error" *ngIf="password.invalid && password.touched">Hasło powinno mieć min. 8 znaków, 1 liczbę, 1 znak specjalny i 1 dużą literę.</span>
+    </label>
+    <button type="submit" class="btn">{{loginForm ? "Zaloguj się!" : "Zarejestruj się!"}}</button>
+    <button class="btn btn-switch" (click)="onPageSwitch()" type="button">{{loginForm ? "Chcę się zarejestrować" : "Chcę się zalogować"}}!</button>
+  </form>
+  <a class="info">
+    Dowiedz się więcej o <span>FAMNOTES</span>
+  </a>
+</div>

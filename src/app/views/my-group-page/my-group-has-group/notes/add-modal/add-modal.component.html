@@ -1,0 +1,33 @@
+<div class="background" (click)="onClose()"></div>
+<div class="modal">
+  <img
+    src="../../../../../../assets/svg/plus.svg"
+    alt="delete button"
+    class="close-button"
+    (click)="onClose()">
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="wrapper">
+      <h2 class="title">Dodaj zadanie:</h2>
+      <label>
+        <input
+          type="text"
+          name="title"
+          placeholder="Nazwa zadania"
+          ngModel
+          required>
+      </label>
+      <label>
+<textarea
+  name="content"
+  placeholder="Treść zadania"
+  ngModel
+  required
+  maxlength="144"
+  #textArea="ngModel"></textarea>
+        <span
+          [ngClass]="{'red': textArea.value.length === 144, 'length-info': true}">{{textArea.value.length}}/144</span>
+      </label>
+      <button class="btn" type="submit">Dodaj zadanie!</button>
+    </div>
+  </form>
+</div>

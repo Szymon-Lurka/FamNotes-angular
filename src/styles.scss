@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.btn {
+  background-color: #A066FF;
+  padding: 0;
+  width:220px;
+  height:47px;
+  border:none;
+  border-radius:50px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  display:block;
+  cursor:pointer;
+}
+input, textarea {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: hsl(0,0%,96%);
+  border:none;
+  border-radius:50px;
+  resize:none;
+  &::placeholder {
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color: hsl(0,0%,70%);
+  }
+}
+input.ng-touched.ng-invalid, textarea.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+span.error {
+  display:block;
+  position:absolute;
+  width:100%;
+  left:0;
+  color:red;
+  font-size:10px;
+  text-align:center;
+}
+p.error {
+  color:red;
+  text-align:center;
+}

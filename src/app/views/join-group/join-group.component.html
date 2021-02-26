@@ -1,0 +1,5 @@
+<app-navigation></app-navigation>
+<div class="wrapper">
+<app-join-group-has-no-group *ngIf="!hasGroup"></app-join-group-has-no-group>
+<app-join-group-has-group *ngIf="hasGroup"></app-join-group-has-group>
+</div>

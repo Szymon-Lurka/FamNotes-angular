@@ -1,0 +1,7 @@
+<app-navigation></app-navigation>
+<div class="background"></div>
+<div class="wrapper">
+  <app-my-group-has-no-group *ngIf="!hasGroup"></app-my-group-has-no-group>
+  <app-my-group-has-group *ngIf="hasGroup"></app-my-group-has-group>
+</div>
+

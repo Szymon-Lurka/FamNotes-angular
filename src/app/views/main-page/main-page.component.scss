@@ -1,0 +1,9 @@
+.wrapper {
+  margin-top: 130px;
+  .title {
+    text-align:center;
+    & span {
+      color: #A066FF;
+    }
+  }
+}

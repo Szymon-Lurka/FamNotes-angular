@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div *ngIf="!isLoading && notes">
+    <app-card
+      *ngFor="let note of notes"
+      [title]="note.title"
+      [author]="note.author"
+      [date]="note.createdAt"
+      [content]="note.content"
+      [id]="note.id"
+      (deleteNote)="onDelete(note.id)"></app-card>
+  </div>
+  <p *ngIf="notes && notes.length < 1 && !isLoading">Nie ma żadnych notatek!</p>
+  <p *ngIf="errorMsg !== ''">{{errorMsg}}</p>
+  <button class="btn-add btn" (click)="onAdd()">
+    <img src="../../../../../assets/svg/add.svg" alt="adding icon">
+  </button>
+  <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+  <app-add-modal *ngIf="creatingMode" (addNote)="onAddNote()"></app-add-modal>
+</div>

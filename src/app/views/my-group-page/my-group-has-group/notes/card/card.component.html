@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="inner-wrapper">
+    <h2 class="title">{{title}}</h2>
+    <span class="date">{{date | date}}</span>
+  </div>
+  <div class="inner-wrapper second">
+    <p class="author">Dodane przez: {{author}} </p>
+      <h2 class="content">{{content}}</h2>
+    <div class="delete">
+      <p class="error" *ngIf="deleteMode">Na pewno usunąć notatkę?</p>
+      <button class="btn" (click)="onDelete()">Usuń zadanie</button>
+    </div>
+  </div>
+</div>

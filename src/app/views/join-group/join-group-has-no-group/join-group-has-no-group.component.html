@@ -1,0 +1,28 @@
+<div class="wrapper">
+<h2 class="title">
+  Pragniesz dołączyć do grupy?</h2>
+  <p class="description">
+    Nic prostszego! Wpisz poniżej TAG grupy do której chcesz dołączyć!</p>
+  <form
+    (ngSubmit)="onSubmit(form)"
+    #form="ngForm">
+    <label>
+      <input
+        type="text"
+        placeholder="Wpisz tag"
+        name="tag"
+        ngModel
+        required
+        maxlength="6"
+        minlength="2"
+        #tag="ngModel">
+      <span class="error" *ngIf="tag.invalid && tag.touched">Tag musi mieć min. 2 znaki!</span>
+    </label>
+    <p class="error" *ngIf="errorMsg !== ''">Ten tag nie istnieje!</p>
+    <button
+      type="submit"
+      class="btn btn-submit">
+      Dołącz do grupy!
+    </button>
+  </form>
+</div>

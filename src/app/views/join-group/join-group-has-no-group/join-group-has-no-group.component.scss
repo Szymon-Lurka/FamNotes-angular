@@ -1,0 +1,24 @@
+.wrapper {
+ height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top:-100px;
+  align-items: center;
+  .title {
+    text-align: center;
+    color: #A066FF;
+  }
+  .description {
+    text-align:center;
+    margin-top: 25px;
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  height: 150px;
+}
