@@ -17,7 +17,6 @@ export class DataStorageService {
   // clearNotes(): void {
   //   this.notes = null;
   //   this.onNotesChange.next();
-  //   console.log('clear notes metoda');
   //   console.log(this.notes);
   // }
 

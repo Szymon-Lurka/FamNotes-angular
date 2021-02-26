@@ -12,12 +12,4 @@ export class SharedService {
   fetchUserData(): User {
     return JSON.parse(localStorage.getItem('userData'));
   }
-  autoLogin(): void {
-    const user = JSON.parse(localStorage.getItem('userData'));
-    if (user) {
-      return;
-    } else {
-      this.router.navigate(['/auth']);
-    }
-  }
 }
